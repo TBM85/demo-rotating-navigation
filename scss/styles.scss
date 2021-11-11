@@ -11,29 +11,26 @@ body {
   background-color: $darkColor;
   color: $lightColor;
   margin: 0;
+  overflow: hidden;
 
   .container {
     background-color: $lightColor;
     color: $darkColor;
     min-height: 100vh;
     padding: 2em;
+    transform-origin: top left;
+    button {
+      cursor: pointer;
+    }
   }
 
+  .container.show {
+    transform: rotate(-10deg);
+  }
+  
   .nav-menu {
     position: fixed;
     bottom: 2em;
     left: 0;
   }
-}
-
-button {
-  cursor: pointer;
-}
-
-.show {
-  display: block;
-}
-
-.show {
-  display: none;
 }

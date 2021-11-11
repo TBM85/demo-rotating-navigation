@@ -1,14 +1,12 @@
 const openBtn = document.querySelector(".open-btn");
 const closeBtn = document.querySelector(".close-btn");
 
-const navMenu = document.querySelector(".nav-menu");
+const container = document.querySelector(".container");
 
 openBtn.addEventListener("click", () => {
-  navMenu.classList.remove("show");
-  navMenu.classList.add("hide");
+  container.classList.add("show");
 })
 
 closeBtn.addEventListener("click", () => {
-  navMenu.classList.remove("hide");
-  navMenu.classList.add("show");
+  container.classList.remove("show");
 })

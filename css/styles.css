@@ -8,6 +8,7 @@ body {
   background-color: #202124;
   color: #fff;
   margin: 0;
+  overflow: hidden;
 }
 
 body .container {
@@ -15,23 +16,20 @@ body .container {
   color: #202124;
   min-height: 100vh;
   padding: 2em;
+  transform-origin: top left;
+}
+
+body .container button {
+  cursor: pointer;
+}
+
+body .container.show {
+  transform: rotate(-10deg);
 }
 
 body .nav-menu {
   position: fixed;
   bottom: 2em;
   left: 0;
-}
-
-button {
-  cursor: pointer;
-}
-
-.show {
-  display: block;
-}
-
-.show {
-  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
