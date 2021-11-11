@@ -1,3 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+/********** COLORS **********/
+/********** GENERAL **********/
+body {
+  background-color: #202124;
+  color: #fff;
+  margin: 0;
+}
+
+body .container {
+  background-color: #fff;
+  color: #202124;
+  min-height: 100vh;
+  padding: 2em;
+}
+
+body .nav-menu {
+  position: fixed;
+  bottom: 2em;
+  left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
 .show {
   display: block;
 }

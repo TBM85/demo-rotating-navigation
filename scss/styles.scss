@@ -1,4 +1,34 @@
+* {
+  box-sizing: border-box;
+}
 
+/********** COLORS **********/
+$darkColor: #202124;
+$lightColor: #fff;
+
+/********** GENERAL **********/
+body {
+  background-color: $darkColor;
+  color: $lightColor;
+  margin: 0;
+
+  .container {
+    background-color: $lightColor;
+    color: $darkColor;
+    min-height: 100vh;
+    padding: 2em;
+  }
+
+  .nav-menu {
+    position: fixed;
+    bottom: 2em;
+    left: 0;
+  }
+}
+
+button {
+  cursor: pointer;
+}
 
 .show {
   display: block;
