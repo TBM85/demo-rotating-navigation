@@ -1,5 +1,17 @@
-* {
-  box-sizing: border-box;
+/********** MIXINS **********/
+@mixin ext-lines {
+  content: "";
+  position: absolute;
+  width: 3em;
+  height: 0.35em;
+  background-color: $darkColor;
+  border-radius: 0.25em;
+  transition: all .5s ease-in-out;
+}
+
+@mixin all-lines ($transform) {
+  transform: $transform;
+  width: 3.5em;
 }
 
 /********** COLORS **********/
@@ -7,6 +19,12 @@ $darkColor: #202124;
 $lightColor: #fff;
 
 /********** GENERAL **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: $darkColor;
   color: $lightColor;
@@ -19,8 +37,42 @@ body {
     min-height: 100vh;
     padding: 2em;
     transform-origin: top left;
-    button {
+
+    .btn-menu {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 3.5em;
+      height: 3.5em;
       cursor: pointer;
+      transition: all .5s ease-in-out;
+
+      .btn-menu__burger {
+        width: 3em;
+        height: 0.35em;
+        background-color: $darkColor;
+        border-radius: 0.25em;
+        transition: all .5s ease-in-out;
+        &::before {
+          transform: translateY(-1em);
+          @include ext-lines;
+        }
+        &::after {
+          transform: translateY(1em);
+          @include ext-lines;
+        }
+      }
+    }
+    .btn-menu.open .btn-menu__burger {
+      background: transparent;
+      box-shadow: none;
+      @include all-lines (translateX(-4em));
+      &::before {
+        @include all-lines (rotate(45deg) translate(2.5em, -2.5em));
+      }
+      &::after {
+        @include all-lines (rotate(-45deg) translate(2.5em, 2.5em));
+      }
     }
   }
 
