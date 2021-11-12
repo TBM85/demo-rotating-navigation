@@ -1,3 +1,6 @@
+/********** FONT **********/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
 /********** MIXINS **********/
 @mixin ext-lines {
   content: "";
@@ -34,6 +37,7 @@ body {
   color: $lightColor;
   margin: 0;
   overflow: hidden;
+  font-family: 'Lato', sans-serif;
 
   .container {
     background-color: $lightColor;
@@ -58,6 +62,7 @@ body {
         background-color: $darkColor;
         border-radius: 0.25em;
         @include transition;
+        
         &::before {
           transform: translateY(-1em);
           @include ext-lines;
@@ -72,6 +77,7 @@ body {
       background: transparent;
       box-shadow: none;
       @include all-lines (translateX(-4em));
+
       &::before {
         @include all-lines (rotate(45deg) translate(2.5em, -2.5em));
       }
@@ -90,5 +96,18 @@ body {
     position: fixed;
     bottom: 2em;
     left: 0;
+    padding: 0.8em;
+    
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 1em;
+        margin: 0.5em 0.35em;
+        font-size: 1.25em;
+      }
+    }
   }
 }

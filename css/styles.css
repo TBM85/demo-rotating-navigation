@@ -1,3 +1,5 @@
+/********** FONT **********/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap");
 /********** MIXINS **********/
 /********** COLORS **********/
 /********** GENERAL **********/
@@ -12,6 +14,7 @@ body {
   color: #fff;
   margin: 0;
   overflow: hidden;
+  font-family: 'Lato', sans-serif;
 }
 
 body .container {
@@ -89,5 +92,18 @@ body .nav-menu {
   position: fixed;
   bottom: 2em;
   left: 0;
+  padding: 0.8em;
+}
+
+body .nav-menu li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+body .nav-menu li img {
+  width: 1em;
+  margin: 0.5em 0.35em;
+  font-size: 1.25em;
 }
 /*# sourceMappingURL=styles.css.map */
