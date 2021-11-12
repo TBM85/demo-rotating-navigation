@@ -20,6 +20,7 @@ body .container {
   min-height: 100vh;
   padding: 2em;
   transform-origin: top left;
+  transition: all .5s ease-in-out;
 }
 
 body .container .btn-menu {
@@ -81,6 +82,7 @@ body .container .btn-menu.open .btn-menu__burger::after {
 
 body .container.show {
   transform: rotate(-10deg);
+  transition: all .5s ease-in-out;
 }
 
 body .nav-menu {

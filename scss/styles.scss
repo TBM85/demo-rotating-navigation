@@ -14,6 +14,10 @@
   width: 3.5em;
 }
 
+@mixin transition {
+  transition: all .5s ease-in-out;
+}
+
 /********** COLORS **********/
 $darkColor: #202124;
 $lightColor: #fff;
@@ -37,6 +41,7 @@ body {
     min-height: 100vh;
     padding: 2em;
     transform-origin: top left;
+    @include transition;
 
     .btn-menu {
       position: relative;
@@ -45,14 +50,14 @@ body {
       width: 3.5em;
       height: 3.5em;
       cursor: pointer;
-      transition: all .5s ease-in-out;
+      @include transition;
 
       .btn-menu__burger {
         width: 3em;
         height: 0.35em;
         background-color: $darkColor;
         border-radius: 0.25em;
-        transition: all .5s ease-in-out;
+        @include transition;
         &::before {
           transform: translateY(-1em);
           @include ext-lines;
@@ -78,6 +83,7 @@ body {
 
   .container.show {
     transform: rotate(-10deg);
+    @include transition;
   }
   
   .nav-menu {
