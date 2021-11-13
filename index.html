@@ -12,31 +12,32 @@
     <title>Rotating navigation</title>
     <script src="js/app.js" defer></script>
   </head>
-  <body>
+  <body onload="getPageContent('home')">
     <div class="container">
       <div class="btn-menu">
         <div class="btn-menu__burger"></div>
       </div>
+      <h1>Rotating Navigation</h1>
       <div class="content">
-        <h1>Rotating Navigation</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus, nisl sed condimentum semper, tortor elit euismod urna, sit amet semper lorem arcu nec tortor. Nulla consectetur blandit malesuada. Vestibulum non velit sit amet ante fringilla ornare. Morbi egestas risus magna, sit amet venenatis nulla semper eget. Sed ut mauris justo. Vivamus sed molestie mauris, sed elementum justo. Phasellus venenatis iaculis lacinia. Mauris rutrum tellus vel dolor euismod, vel iaculis dui elementum. Suspendisse purus elit, congue eu maximus eget, fringilla vitae nibh. Vestibulum posuere et massa quis efficitur.
-        </p>
+        <p class="content-text"></p>
       </div>
     </div>
     <nav class="nav-menu">
       <li>
-        <a href="#"><img src="./assets/icons/home.svg" alt="Home icon" />
+        <a href="#" onclick="getPageContent('home')">
+          <img src="./assets/icons/home.svg" alt="Home icon" />
           Home
         </a>
       </li>
       <li>
-        <a href="#"><img src="./assets/icons/camera.svg" alt="Camera icon" />
+        <a href="#" onclick="getPageContent('photos')">
+          <img src="./assets/icons/camera.svg" alt="Camera icon" />
           Photos
         </a>
       </li>
       <li>
-        <a href="#"><img src="./assets/icons/video-camera.svg" alt="Video camera icon" />
+        <a href="#" onclick="getPageContent('videos')">
+          <img src="./assets/icons/video-camera.svg" alt="Video camera icon" />
           Videos
         </a>
       </li>

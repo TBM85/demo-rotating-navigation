@@ -29,3 +29,31 @@ btnMenu.addEventListener("click", () => {
     thirdMenuItem.style.marginLeft = "-10px";
   }
 });
+
+let pages = {
+  "home": "Welcome",
+  "photos": "These are our photos",
+  "videos": "These are our videos"
+}
+
+// When you click an item in the navigation menu, its content is displayed
+const getPageContent = (page) => {
+  let showContent;
+
+  switch (page) {
+    case "home":
+      showContent = pages.home;
+      break;
+    case "photos": 
+      showContent = pages.photos;
+      break;
+    case "videos":
+      showContent = pages.videos;
+      break;
+    default:
+      showContent = pages.home;
+      break;
+  }
+
+  document.querySelector(".content-text").innerHTML = showContent;
+}
