@@ -1,5 +1,13 @@
+let pages = {
+  "home": "Welcome",
+  "photos": "These are our photos",
+  "videos": "These are our videos"
+}
+
 const container = document.querySelector(".container");
 const btnMenu = document.querySelector(".btn-menu");
+
+const itemsMenu = document.querySelectorAll("li");
 
 const secondMenuItem = document.querySelector("li:nth-child(2)");
 const thirdMenuItem = document.querySelector("li:nth-child(3)");
@@ -20,21 +28,13 @@ btnMenu.addEventListener("click", () => {
     thirdMenuItem.style.transition = "all .5s ease-in-out";
     thirdMenuItem.style.marginLeft = "15px";
   } else {
-    btnMenu.classList.remove("open");
-    isCrossing = false;
-    container.classList.remove("show");
+    closeRotation();
     secondMenuItem.style.transition = "all .5s ease-in-out";
     secondMenuItem.style.marginLeft = "-5px";
     thirdMenuItem.style.transition = "all .5s ease-in-out";
     thirdMenuItem.style.marginLeft = "-10px";
   }
 });
-
-let pages = {
-  "home": "Welcome",
-  "photos": "These are our photos",
-  "videos": "These are our videos"
-}
 
 // When you click an item in the navigation menu, its content is displayed
 const getPageContent = (page) => {
@@ -56,4 +56,18 @@ const getPageContent = (page) => {
   }
 
   document.querySelector(".content-text").innerHTML = showContent;
+}
+
+// When you click an item in the navigation menu, the page rotation closes and the hamburger menu returns to its normal form
+for (let itemMenu of itemsMenu) {
+  itemMenu.addEventListener("click", () => {
+    closeRotation();
+  });
+}
+
+// The page rotation closes and the hamburger menu returns to its normal form
+const closeRotation = () => {
+  btnMenu.classList.remove("open");
+  isCrossing = false;
+  container.classList.remove("show");
 }
