@@ -100,13 +100,18 @@ body {
     
     li {
       list-style: none;
-      display: flex;
-      align-items: center;
 
-      img {
-        width: 1em;
-        margin: 0.5em 0.35em;
-        font-size: 1.25em;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $lightColor;
+
+        img {
+          width: 1em;
+          margin: 0.5em 0.35em;
+          font-size: 1.25em;
+        }
       }
     }
   }

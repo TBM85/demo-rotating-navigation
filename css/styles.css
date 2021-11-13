@@ -97,11 +97,16 @@ body .nav-menu {
 
 body .nav-menu li {
   list-style: none;
-  display: flex;
-  align-items: center;
 }
 
-body .nav-menu li img {
+body .nav-menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+body .nav-menu li a img {
   width: 1em;
   margin: 0.5em 0.35em;
   font-size: 1.25em;
