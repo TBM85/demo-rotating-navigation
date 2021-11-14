@@ -26,7 +26,14 @@ body .container {
   transition: all .5s ease-in-out;
 }
 
-body .container .btn-menu {
+body .container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2em;
+}
+
+body .container .header .btn-menu {
   position: relative;
   display: flex;
   align-items: center;
@@ -36,7 +43,7 @@ body .container .btn-menu {
   transition: all .5s ease-in-out;
 }
 
-body .container .btn-menu .btn-menu__burger {
+body .container .header .btn-menu .btn-menu__burger {
   width: 3em;
   height: 0.35em;
   background-color: #202124;
@@ -44,7 +51,7 @@ body .container .btn-menu .btn-menu__burger {
   transition: all .5s ease-in-out;
 }
 
-body .container .btn-menu .btn-menu__burger::before {
+body .container .header .btn-menu .btn-menu__burger::before {
   transform: translateY(-1em);
   content: "";
   position: absolute;
@@ -55,7 +62,7 @@ body .container .btn-menu .btn-menu__burger::before {
   transition: all .5s ease-in-out;
 }
 
-body .container .btn-menu .btn-menu__burger::after {
+body .container .header .btn-menu .btn-menu__burger::after {
   transform: translateY(1em);
   content: "";
   position: absolute;
@@ -66,21 +73,25 @@ body .container .btn-menu .btn-menu__burger::after {
   transition: all .5s ease-in-out;
 }
 
-body .container .btn-menu.open .btn-menu__burger {
+body .container .header .btn-menu.open .btn-menu__burger {
   background: transparent;
   box-shadow: none;
   transform: translateX(-4em);
   width: 3.5em;
 }
 
-body .container .btn-menu.open .btn-menu__burger::before {
+body .container .header .btn-menu.open .btn-menu__burger::before {
   transform: rotate(45deg) translate(2.5em, -2.5em);
   width: 3.5em;
 }
 
-body .container .btn-menu.open .btn-menu__burger::after {
+body .container .header .btn-menu.open .btn-menu__burger::after {
   transform: rotate(-45deg) translate(2.5em, 2.5em);
   width: 3.5em;
+}
+
+body .container .header h1 {
+  text-align: right;
 }
 
 body .container.show {
