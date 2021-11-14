@@ -51,7 +51,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
 
       .btn-menu {
         position: relative;
@@ -96,15 +96,37 @@ body {
         text-align: right;
       }
     }
+
+    .content {
+      line-height: 1.5;
+
+      .content-title {
+        margin: 1em 0 1.5em;
+      }
+  
+      .content-text {
+        text-align: justify;
+      }
+
+      button {
+        padding: 0.8em 1.2em;
+        font-size: 1.2em;
+        margin: 1em auto;
+        color: $lightColor;
+        background: $darkColor;
+        border: none;
+        border-radius: 0.25em;
+      }
+    }
   }
 
   .container.show {
-    transform: rotate(-10deg);
+    transform: rotate(-18deg);
     @include transition;
   }
   
   .nav-menu {
-    position: fixed;
+    position: absolute;
     bottom: 2em;
     left: 0;
     padding: 0.8em;

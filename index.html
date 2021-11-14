@@ -9,7 +9,7 @@
       content="Rotating navigation website made with JavaScript"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Rotating navigation</title>
+    <title>Rotate Page</title>
     <script src="js/app.js" defer></script>
   </head>
   <body onload="getPageContent('home')">
@@ -20,9 +20,18 @@
         </div>
         <h1>Rotate Page</h1>
       </div>
+      <hr />
       <div class="content">
         <h2 class="content-title"></h2>
         <p class="content-text"></p>
+        <div class="content-contact">
+          <p><strong>Email:</strong> <span class="content-email"></span></p>
+          <p><strong>Phone:</strong>  <span class="content-phone"></span></p>
+          <p><strong>Address:</strong>  <span class="content-address"></span></p>
+        </div>
+        <button type="button" class="btn-to-contact" onclick="getPageContent('contact_us')">
+          Contact Us
+        </button>
       </div>
     </div>
     <nav class="nav-menu">
@@ -33,15 +42,15 @@
         </a>
       </li>
       <li>
-        <a href="#" onclick="getPageContent('photos')">
-          <img src="./assets/icons/camera.svg" alt="Camera icon" />
-          Photos
+        <a href="#" onclick="getPageContent('about_us')">
+          <img src="./assets/icons/about_us.svg" alt="Question icon" />
+          About us
         </a>
       </li>
       <li>
-        <a href="#" onclick="getPageContent('videos')">
-          <img src="./assets/icons/video-camera.svg" alt="Video camera icon" />
-          Videos
+        <a href="#" onclick="getPageContent('contact_us')">
+          <img src="./assets/icons/contact_us.svg" alt="Address book icon" />
+          Contact us
         </a>
       </li>
     </nav>

@@ -30,7 +30,7 @@ body .container .header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 body .container .header .btn-menu {
@@ -94,13 +94,35 @@ body .container .header h1 {
   text-align: right;
 }
 
+body .container .content {
+  line-height: 1.5;
+}
+
+body .container .content .content-title {
+  margin: 1em 0 1.5em;
+}
+
+body .container .content .content-text {
+  text-align: justify;
+}
+
+body .container .content button {
+  padding: 0.8em 1.2em;
+  font-size: 1.2em;
+  margin: 1em auto;
+  color: #fff;
+  background: #202124;
+  border: none;
+  border-radius: 0.25em;
+}
+
 body .container.show {
-  transform: rotate(-10deg);
+  transform: rotate(-18deg);
   transition: all .5s ease-in-out;
 }
 
 body .nav-menu {
-  position: fixed;
+  position: absolute;
   bottom: 2em;
   left: 0;
   padding: 0.8em;
