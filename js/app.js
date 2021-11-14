@@ -1,7 +1,16 @@
 let pages = {
-  "home": "Welcome",
-  "photos": "These are our photos",
-  "videos": "These are our videos"
+  "home": {
+    title: "Home",
+    content: "Welcome"
+  },
+  "photos": {
+    title: "Photos",
+    content: "These are our photos"
+  },
+  "videos": {
+    title: "Videos",
+    content: "These are our videos"
+  }
 }
 
 const container = document.querySelector(".container");
@@ -38,23 +47,29 @@ btnMenu.addEventListener("click", () => {
 
 // When you click an item in the navigation menu, its content is displayed
 const getPageContent = (page) => {
+  let showTitle;
   let showContent;
 
   switch (page) {
     case "home":
-      showContent = pages.home;
+      showTitle = pages.home.title;
+      showContent = pages.home.content;
       break;
     case "photos": 
-      showContent = pages.photos;
+      showTitle = pages.photos.title;
+      showContent = pages.photos.content;
       break;
     case "videos":
-      showContent = pages.videos;
+      showTitle = pages.videos.title;
+      showContent = pages.videos.content;
       break;
     default:
-      showContent = pages.home;
+      showTitle = pages.home.title;
+      showContent = pages.home.content;
       break;
   }
 
+  document.querySelector(".content-title").innerHTML = showTitle;
   document.querySelector(".content-text").innerHTML = showContent;
 }
 
