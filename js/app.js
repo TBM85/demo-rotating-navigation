@@ -115,6 +115,11 @@ for (let itemMenu of itemsMenu) {
   });
 }
 
+// When you click the "Contact Us" button, the page rotation closes and the hamburger menu returns to its normal form
+btnToContact.addEventListener("click", () => {
+  closeRotation();
+});
+
 // The page rotation closes and the hamburger menu returns to its normal form
 const closeRotation = () => {
   btnMenu.classList.remove("open");

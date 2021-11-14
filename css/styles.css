@@ -114,6 +114,7 @@ body .container .content button {
   background: #202124;
   border: none;
   border-radius: 0.25em;
+  cursor: pointer;
 }
 
 body .container.show {
