@@ -121,6 +121,11 @@ body .container .content button {
   cursor: pointer;
 }
 
+body .container .footer {
+  margin: auto auto 0;
+  font-size: 0.8em;
+}
+
 body .container.show {
   transform: rotate(-18deg);
   transition: all .5s ease-in-out;
