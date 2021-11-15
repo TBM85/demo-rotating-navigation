@@ -45,6 +45,8 @@ body {
     min-height: 100vh;
     padding: 2em;
     transform-origin: top left;
+    display: flex;
+    flex-direction: column;
     @include transition;
 
     .header {
@@ -99,6 +101,8 @@ body {
 
     .content {
       line-height: 1.5;
+      max-width: 60em;
+      margin: 1em auto;
 
       .content-title {
         margin: 1em 0 1.5em;

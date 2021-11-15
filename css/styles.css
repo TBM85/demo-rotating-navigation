@@ -23,6 +23,8 @@ body .container {
   min-height: 100vh;
   padding: 2em;
   transform-origin: top left;
+  display: flex;
+  flex-direction: column;
   transition: all .5s ease-in-out;
 }
 
@@ -96,6 +98,8 @@ body .container .header h1 {
 
 body .container .content {
   line-height: 1.5;
+  max-width: 60em;
+  margin: 1em auto;
 }
 
 body .container .content .content-title {
