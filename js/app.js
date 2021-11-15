@@ -36,12 +36,15 @@ const contentAddress = document.querySelector(".content-address");
 
 const btnToContact = document.querySelector(".btn-to-contact");
 
+const navMenu = document.querySelector(".nav-menu");
+
 // When the hamburger menu is clicked:
 // the shape toggle between a cross and the original shape, 
 // the container //// alternates between rotating or not,
 // horizontal scrolling of the second and third menu items
 btnMenu.addEventListener("click", () => {
   if (!isCrossing) {
+    navMenu.style.display = "block";
     btnMenu.classList.add("open");
     isCrossing = true;
     container.classList.add("show");

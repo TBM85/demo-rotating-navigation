@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #202124;
+  background-color: #27282e;
   color: #fff;
   margin: 0;
   overflow: hidden;
@@ -19,7 +19,7 @@ body {
 
 body .container {
   background-color: #fff;
-  color: #202124;
+  color: #27282e;
   min-height: 100vh;
   padding: 2em;
   transform-origin: top left;
@@ -48,7 +48,7 @@ body .container .header .btn-menu {
 body .container .header .btn-menu .btn-menu__burger {
   width: 3em;
   height: 0.35em;
-  background-color: #202124;
+  background-color: #27282e;
   border-radius: 0.25em;
   transition: all .5s ease-in-out;
 }
@@ -59,7 +59,7 @@ body .container .header .btn-menu .btn-menu__burger::before {
   position: absolute;
   width: 3em;
   height: 0.35em;
-  background-color: #202124;
+  background-color: #27282e;
   border-radius: 0.25em;
   transition: all .5s ease-in-out;
 }
@@ -70,7 +70,7 @@ body .container .header .btn-menu .btn-menu__burger::after {
   position: absolute;
   width: 3em;
   height: 0.35em;
-  background-color: #202124;
+  background-color: #27282e;
   border-radius: 0.25em;
   transition: all .5s ease-in-out;
 }
@@ -115,7 +115,7 @@ body .container .content button {
   font-size: 1.2em;
   margin: 1em auto;
   color: #fff;
-  background: #202124;
+  background: #27282e;
   border: none;
   border-radius: 0.25em;
   cursor: pointer;
@@ -136,6 +136,7 @@ body .nav-menu {
   bottom: 2em;
   left: 0;
   padding: 0.8em;
+  display: none;
 }
 
 body .nav-menu li {

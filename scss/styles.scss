@@ -22,7 +22,7 @@
 }
 
 /********** COLORS **********/
-$darkColor: #202124;
+$darkColor: #27282e;
 $lightColor: #fff;
 
 /********** GENERAL **********/
@@ -140,6 +140,7 @@ body {
     bottom: 2em;
     left: 0;
     padding: 0.8em;
+    display: none;
     
     li {
       list-style: none;
