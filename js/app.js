@@ -47,18 +47,7 @@ const socialMedia = document.querySelector(".social-media");
 // horizontal scrolling of the second and third menu items
 btnMenu.addEventListener("click", () => {
   if (!isCrossing) {
-    containerBack.style.display = "flex";
-    btnMenu.classList.add("open");
-    isCrossing = true;
-    container.classList.add("show");
-    firstMenuItem.style.transition = "all .5s ease-in-out";
-    firstMenuItem.style.marginLeft = "0px";
-    secondMenuItem.style.transition = "all .5s ease-in-out";
-    secondMenuItem.style.marginLeft = "5px";
-    thirdMenuItem.style.transition = "all .5s ease-in-out";
-    thirdMenuItem.style.marginLeft = "10px";
-    socialMedia.style.transition = "all .5s ease-in-out";
-    socialMedia.style.marginBottom = "10px";
+    openRotation();
   } else {
     closeRotation();
   }
@@ -125,6 +114,22 @@ for (let itemMenu of itemsMenu) {
 btnToContact.addEventListener("click", () => {
   closeRotation();
 });
+
+// The page rotation opens and the hamburger menu turns into a cross
+const openRotation = () => {
+  containerBack.style.display = "flex";
+  btnMenu.classList.add("open");
+  isCrossing = true;
+  container.classList.add("show");
+  firstMenuItem.style.transition = "all .5s ease-in-out";
+  firstMenuItem.style.marginLeft = "0px";
+  secondMenuItem.style.transition = "all .5s ease-in-out";
+  secondMenuItem.style.marginLeft = "5px";
+  thirdMenuItem.style.transition = "all .5s ease-in-out";
+  thirdMenuItem.style.marginLeft = "10px";
+  socialMedia.style.transition = "all .5s ease-in-out";
+  socialMedia.style.marginBottom = "10px";
+}
 
 // The page rotation closes and the hamburger menu returns to its normal form
 const closeRotation = () => {
