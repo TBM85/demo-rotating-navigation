@@ -37,6 +37,7 @@ html body .container {
   transform-origin: top left;
   display: flex;
   flex-direction: column;
+  min-width: 100vw;
   transition: all .5s ease-in-out;
 }
 

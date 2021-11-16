@@ -22,6 +22,7 @@ const btnMenu = document.querySelector(".btn-menu");
 
 const itemsMenu = document.querySelectorAll("li");
 
+const firstMenuItem = document.querySelector("li:nth-child(1)");
 const secondMenuItem = document.querySelector("li:nth-child(2)");
 const thirdMenuItem = document.querySelector("li:nth-child(3)");
 
@@ -38,6 +39,8 @@ const btnToContact = document.querySelector(".btn-to-contact");
 
 const containerBack = document.querySelector(".container-background");
 
+const socialMedia = document.querySelector(".social-media");
+
 // When the hamburger menu is clicked:
 // the shape toggle between a cross and the original shape, 
 // the container //// alternates between rotating or not,
@@ -48,16 +51,16 @@ btnMenu.addEventListener("click", () => {
     btnMenu.classList.add("open");
     isCrossing = true;
     container.classList.add("show");
+    firstMenuItem.style.transition = "all .5s ease-in-out";
+    firstMenuItem.style.marginLeft = "0px";
     secondMenuItem.style.transition = "all .5s ease-in-out";
     secondMenuItem.style.marginLeft = "5px";
     thirdMenuItem.style.transition = "all .5s ease-in-out";
-    thirdMenuItem.style.marginLeft = "15px";
+    thirdMenuItem.style.marginLeft = "10px";
+    socialMedia.style.transition = "all .5s ease-in-out";
+    socialMedia.style.marginBottom = "10px";
   } else {
     closeRotation();
-    secondMenuItem.style.transition = "all .5s ease-in-out";
-    secondMenuItem.style.marginLeft = "-5px";
-    thirdMenuItem.style.transition = "all .5s ease-in-out";
-    thirdMenuItem.style.marginLeft = "-10px";
   }
 });
 
@@ -128,4 +131,12 @@ const closeRotation = () => {
   btnMenu.classList.remove("open");
   isCrossing = false;
   container.classList.remove("show");
+  firstMenuItem.style.transition = "all .5s ease-in-out";
+  firstMenuItem.style.marginLeft = "-100px";
+  secondMenuItem.style.transition = "all .5s ease-in-out";
+  secondMenuItem.style.marginLeft = "-110px";
+  thirdMenuItem.style.transition = "all .5s ease-in-out";
+  thirdMenuItem.style.marginLeft = "-120px";
+  socialMedia.style.transition = "all .5s ease-in-out";
+  socialMedia.style.marginBottom = "-80px";
 }

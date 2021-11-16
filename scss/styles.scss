@@ -58,6 +58,7 @@ html {
       transform-origin: top left;
       display: flex;
       flex-direction: column;
+      min-width: 100vw;
       @include transition;
 
       .header {
