@@ -1,6 +1,18 @@
 /********** FONT **********/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
 
+/********** COLORS **********/
+$darkColor: #27282e;
+$lightColor: #fff;
+
+/********** MEDIA QUERIES **********/
+@media (max-width: 575px) {
+  .social-media {
+    justify-content: flex-start !important;
+    margin-top: 1em;
+  }
+}
+
 /********** MIXINS **********/
 @mixin ext-lines {
   content: "";
@@ -20,10 +32,6 @@
 @mixin transition {
   transition: all .5s ease-in-out;
 }
-
-/********** COLORS **********/
-$darkColor: #27282e;
-$lightColor: #fff;
 
 /********** GENERAL **********/
 * {
@@ -139,6 +147,7 @@ html {
     }
     
     .container-background {
+      flex-direction: column;
       position: absolute;
       bottom: 0;
       left: 0;

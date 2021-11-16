@@ -44,7 +44,7 @@ const containerBack = document.querySelector(".container-background");
 // horizontal scrolling of the second and third menu items
 btnMenu.addEventListener("click", () => {
   if (!isCrossing) {
-    containerBack.style.display = "block";
+    containerBack.style.display = "flex";
     btnMenu.classList.add("open");
     isCrossing = true;
     container.classList.add("show");
