@@ -9,7 +9,11 @@
   box-sizing: border-box;
 }
 
-body {
+html {
+  position: fixed;
+}
+
+html body {
   background-color: #27282e;
   color: #fff;
   margin: 0;
@@ -17,7 +21,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-body .container {
+html body .container {
   background-color: #fff;
   color: #27282e;
   min-height: 100vh;
@@ -28,14 +32,14 @@ body .container {
   transition: all .5s ease-in-out;
 }
 
-body .container .header {
+html body .container .header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 1em;
 }
 
-body .container .header .btn-menu {
+html body .container .header .btn-menu {
   position: relative;
   display: flex;
   align-items: center;
@@ -45,7 +49,7 @@ body .container .header .btn-menu {
   transition: all .5s ease-in-out;
 }
 
-body .container .header .btn-menu .btn-menu__burger {
+html body .container .header .btn-menu .btn-menu__burger {
   width: 3em;
   height: 0.35em;
   background-color: #27282e;
@@ -53,7 +57,7 @@ body .container .header .btn-menu .btn-menu__burger {
   transition: all .5s ease-in-out;
 }
 
-body .container .header .btn-menu .btn-menu__burger::before {
+html body .container .header .btn-menu .btn-menu__burger::before {
   transform: translateY(-1em);
   content: "";
   position: absolute;
@@ -64,7 +68,7 @@ body .container .header .btn-menu .btn-menu__burger::before {
   transition: all .5s ease-in-out;
 }
 
-body .container .header .btn-menu .btn-menu__burger::after {
+html body .container .header .btn-menu .btn-menu__burger::after {
   transform: translateY(1em);
   content: "";
   position: absolute;
@@ -75,42 +79,42 @@ body .container .header .btn-menu .btn-menu__burger::after {
   transition: all .5s ease-in-out;
 }
 
-body .container .header .btn-menu.open .btn-menu__burger {
+html body .container .header .btn-menu.open .btn-menu__burger {
   background: transparent;
   box-shadow: none;
   transform: translateX(-4em);
   width: 3.5em;
 }
 
-body .container .header .btn-menu.open .btn-menu__burger::before {
+html body .container .header .btn-menu.open .btn-menu__burger::before {
   transform: rotate(45deg) translate(2.5em, -2.5em);
   width: 3.5em;
 }
 
-body .container .header .btn-menu.open .btn-menu__burger::after {
+html body .container .header .btn-menu.open .btn-menu__burger::after {
   transform: rotate(-45deg) translate(2.5em, 2.5em);
   width: 3.5em;
 }
 
-body .container .header h1 {
+html body .container .header h1 {
   text-align: right;
 }
 
-body .container .content {
+html body .container .content {
   line-height: 1.5;
   max-width: 60em;
   margin: 1em auto;
 }
 
-body .container .content .content-title {
+html body .container .content .content-title {
   margin: 1em 0 1.5em;
 }
 
-body .container .content .content-text {
+html body .container .content .content-text {
   text-align: justify;
 }
 
-body .container .content button {
+html body .container .content button {
   padding: 0.8em 1.2em;
   font-size: 1.2em;
   margin: 1em auto;
@@ -121,38 +125,61 @@ body .container .content button {
   cursor: pointer;
 }
 
-body .container .footer {
+html body .container .footer {
   margin: auto auto 0;
   font-size: 0.8em;
 }
 
-body .container.show {
-  transform: rotate(-18deg);
+html body .container.show {
+  transform: rotate(-20deg);
   transition: all .5s ease-in-out;
 }
 
-body .nav-menu {
+html body .container-background {
   position: absolute;
-  bottom: 2em;
+  bottom: 0;
   left: 0;
-  padding: 0.8em;
   display: none;
 }
 
-body .nav-menu li {
+html body .container-background .nav-menu {
+  padding: 0.8em;
+}
+
+html body .container-background .nav-menu li {
   list-style: none;
 }
 
-body .nav-menu li a {
+html body .container-background .nav-menu li a {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #fff;
 }
 
-body .nav-menu li a img {
+html body .container-background .nav-menu li a img {
   width: 1em;
   margin: 0.5em 0.35em;
   font-size: 1.25em;
+}
+
+html body .container-background .social-media {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 100vw;
+  padding: 0.5em;
+}
+
+html body .container-background .social-media li {
+  list-style: none;
+  margin: 0.25em;
+}
+
+html body .container-background .social-media li img {
+  width: 2.5em;
+  border: 1px solid #fff;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
